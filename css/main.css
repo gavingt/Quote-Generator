@@ -109,10 +109,10 @@ textarea {
 
     .quote-container {
         width: 700px;
+        max-width: 70%;
         background: white;
         border-radius: 3px;
-
-        padding: 20px 40px;
+        padding: 10px 40px;
         text-align: center;
     }
 
@@ -120,20 +120,49 @@ textarea {
         background: #25366d;
         color: white;
         border: none;
-        margin-top: 10px;
         outline: none;
         border-radius: 3px;
         padding: 5px 12px;
+        display: inline-block;
+        height: 100%;
+        float: right;
+        margin-right: 50px;
     }
 
     .quote-container>p {
         visibility: hidden;
     }
 
+    .twitter-link {
+        float: left;
+        height: 100%;
+        margin-left: 50px;
+    }
+
+    .twitter-button{
+        display: inline-block;
+        height: 100%
+    }
+
+    #button-row {
+        height: 2.2em;
+        margin-top: 30px;
+    }
 
 
+@media (max-width: 525px) {
+    .new-quote-button {
+        margin-right: 0;
+    }
 
+    .twitter-link {
+        margin-left: 0;
+    }
 
+    .quote-container {
+        padding: 10px 15px;
+    }
+}
 
 
 
