@@ -19,7 +19,11 @@ function fetchQuote(changeColor) {
             var post = data.shift(); // The data is an array of posts. Grab the first one.
             $('#quote-title').text(post.title);
 
-            var content = post.content.replace('<p>', '').replace('</p>', '').trim();
+            var content = post.content.replace('<p>', '').replace('</p>', '').replace(/&#8217;/gi, "'").replace(/&#8220;/gi, "'").replace(/&#8221;/gi, "'").trim();
+            console.log(content);
+
+            $(".twitter-link").attr("href", "https://twitter.com/intent/tweet?text=" + content);
+
             content = '<p>"' + content + '"</p>';
             $('#quote-content').html(content);
 
